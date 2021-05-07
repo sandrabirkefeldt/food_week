@@ -19,7 +19,63 @@
 
 <body>
        <header>
-       <img id="logo"src="img/logo-uden-dato.png" alt="logo-uden-dato">
+
+        <div class="icon-top">
+            <button onclick="togglePopup()"><img src="img/information-icon.png" class="information-icon"></button>
+        </div>
+
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+        <div class="close-button" onclick="togglePopup()">&times;</div>
+
+        <h2>Hvad betyder farverne?</h2>
+
+        <div class="pin-container">
+        <div>
+        <img src="img/blaa-pin.png" alt="pin">
+        <p>Kystpromenaden</p>
+        </div>
+         <div>
+        <img src="img/gron-pin.png" alt="pin">
+         <p>Food Walks</p>
+         </div>
+          <div>
+        <img src="img/rod-pin.png" alt="pin">
+         <p>ARoS</p>
+         </div>
+          <div>
+        <img src="img/gul-pin.png" alt="pin">
+         <p>Salling ROOFTOP</p>
+         </div>
+          <div>
+        <img src="img/brun-pin.png" alt="pin">
+         <p>Den Gamle By</p>
+         </div>
+        </div>
+        <div>
+            <h2>Kontakt os</h2>
+            <div>
+            <h3>Telefon</h3>
+            <p>+45 53 53 00 55</p>
+            </div>
+            <div>
+            <h3>Mail</h3>
+            <p>info@thefoodproject.dk</p>
+            </div>
+            <div>
+            <h3>Adresse</h3>
+            <p>Studsgade 10A, 8000 Aarhus C</p>
+            </div>
+        </div>
+ </div>
+        
+    </div>
+
+    <img id="logo" src="img/logo-uden-dato.png" alt="logo-uden-dato">
+
+    
 
     <section id="sogefelt">
             <div class="input-icons">
@@ -28,15 +84,22 @@
             </div>
 
             <div class="button-container">
-                <button class="button-button">Food Walks</button>
-                <button class="button-button"> <a href="#kategorier">Byen ved bugten</a></button>
-                <button class="button-button">ARoS</button> <br>
-                <button class="button-button">Salling ROOFTOP</button>
-                <button class="button-button">Den Gamle By</button>
-                <button class="button-button">Fællesspisning</button>
+                <button class="button-button" style="background-color: #83a0b4"> <a href="#kategorier">Kystpromenaden</a></button>
+                <button class="button-button" style="background-color: #719646">Food Walks</button>
+                <button class="button-button" style="background-color: #aa393b">ARoS</button> <br>
+                <button class="button-button" style="background-color: #c9a123">Salling ROOFTOP</button>
+                <button class="button-button" style="background-color: #988c7c">Den Gamle By</button>
             </div>
 
             </section>
+
+<!-- 
+            <div class="button-change-container">
+                <button class="button-change"><a href="#kortvisning">Kortvisning</a></button>
+                <button class="button-change"><a href="#listevisning">Listevisning</a></button>
+            </div> -->
+
+
     </header>
 
      <div class="splash">
@@ -49,11 +112,14 @@
 
 <div id="mapid"></div>
 
+
+
     </main>
 
-    <footer></footer>
+
     <script src="leaflet.js"></script>
     <script src="js.js"></script>
+    <script src="js/spa.js"></script>
 </body>
 
 </html> 

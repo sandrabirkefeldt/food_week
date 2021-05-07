@@ -36,10 +36,9 @@ var LeafIcon = L.Icon.extend({
 
 var brunPin = new LeafIcon({iconUrl: 'img/brun-pin.png'}),
     blaaPin = new LeafIcon({iconUrl: 'img/blaa-pin.png'}),
-    gronPin = new LeafIcon({ iconUrl: 'img/gron-pin.png' });
-    gulPin = new LeafIcon({ iconUrl: 'img/gul-pin.png' });
-    rodPin = new LeafIcon({ iconUrl: 'img/rod-pin.png' });
-    sortPin = new LeafIcon({iconUrl: 'img/sort-pin.png'});
+    gronPin = new LeafIcon({iconUrl: 'img/gron-pin.png' });
+    gulPin = new LeafIcon({iconUrl: 'img/gul-pin.png' });
+    rodPin = new LeafIcon({iconUrl: 'img/rod-pin.png' });
 
 L.icon = function (options) {
     return new L.Icon(options);

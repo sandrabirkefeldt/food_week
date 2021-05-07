@@ -1,0 +1,32 @@
+[
+    {
+        "id": "fiskekutter",
+        "name": "Spring ombord på fiskekutteren Tove",
+        "description": "Skriv noget her",
+        "target-group": "Alle aldre",
+        "day": "Lørdag",
+        "hours": "12:00 - 14:00",
+        "adress": "Kystpromenaden",
+        "link": "www.madbillet.dk",
+        "img": "img/fiskekutter.jpg",
+        "imgcrop": "img/fiskekutter.jpg",
+        "events": [
+            "byen-ved-bugten"
+        ]
+    },
+    {
+        "id": "fisk",
+        "name": "Kend din fisk",
+        "description": "Skriv noget her",
+        "target-group": "Alle aldre",
+        "day": "Fredag",
+        "hours": "12:00 - 14:00",
+        "adress": "Kystpromenaden",
+        "link": "www.madbillet.dk",
+        "img": "img/fisk.jpg",
+        "imgcrop": "img/fisk.jpg",
+        "events": [
+            "byen-ved-bugten"
+        ]
+    }
+ ]

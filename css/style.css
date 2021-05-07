@@ -5,27 +5,23 @@ body {
     background-color: #eae7e0;
 }
 
-p {
+p,
+h1,
+h2,
+h3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333333;
 }
 
 header {
     display: block;
-    margin: 10px;
-}
-
-header img {
-    width: 30%;
-    display: block;
-    margin: 0 auto;
-    padding: 20px 0 20px 0;
-
+    margin: 10px 0 0 0;
 }
 
 
 #mapid {
-    height: 800px;
-
+    height: 500px;
+    z-index: 0;
 }
 
 /* Logo der toner frem i starten*/
@@ -73,6 +69,97 @@ header img {
     animation: fadeIn 1s ease-in forwards;
 }
 
+
+/* Ikoner i toppen */
+
+.icon-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 5px 5px 0 0;
+}
+
+.icon-top button {
+    border: 0;
+    background: none;
+}
+
+.icon-top img {
+    width: 30px;
+    padding: 3px;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 800ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h2 {
+    font-size: 12px;
+}
+
+.popup img {
+    width: 10%;
+}
+
+
+.pin-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Logo */
+
+#logo {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
 /* søgefelt og genveje */
 #soeg {
     -webkit-appearance: none;
@@ -86,11 +173,25 @@ header img {
     background: #fff;
     border: 0;
     border-radius: 10px;
-    font-family: houschka-rounded, sans-serif;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
 }
 
-/* Buttons */
+.search-icon {
+    position: absolute;
+    width: 15px;
+    padding-top: 14px;
+    right: 30px;
+    opacity: 0.8;
+}
+
+/* Event buttons */
 .button-button {
     text-decoration: none;
     padding: 6px;
@@ -103,10 +204,14 @@ header img {
     background: var(--text-color-light);
     color: #FFF;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    font-family: houschka-rounded, sans-serif;
     font-size: 12px;
-    font-weight: 500;
-
+    font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
 }
 
 .button-button:nth-child(3) {
@@ -121,6 +226,38 @@ header img {
     text-decoration: none;
     color: #FFF;
 }
+
+/* Change buttons */
+
+.button-change-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.button-change {
+    text-decoration: none;
+    width: 49%;
+    font-size: 12px;
+    font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
+    border: none;
+    padding: 10px 0;
+    background: grey;
+}
+
+.button-change a {
+    text-decoration: none;
+    color: #333333;
+}
+
+
 
 
 
