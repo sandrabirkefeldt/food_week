@@ -135,8 +135,9 @@ header {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup h2 {
-    font-size: 12px;
+.popup h2,
+p {
+    font-size: 15px;
 }
 
 .popup img {
@@ -147,6 +148,15 @@ header {
 .pin-container {
     display: flex;
     flex-direction: column;
+}
+
+.pin-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.pinsection img {
+    width: 30%;
 }
 
 
