@@ -28,6 +28,7 @@ header img {
 
 }
 
+/* Logo der toner frem i starten*/
 .splash img {
     width: 80%;
 }
@@ -70,6 +71,55 @@ header img {
     bottom: 0;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
+}
+
+/* søgefelt og genveje */
+#soeg {
+    -webkit-appearance: none;
+    margin: 1em auto;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 350px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    display: block;
+    background: #fff;
+    border: 0;
+    border-radius: 10px;
+    font-family: houschka-rounded, sans-serif;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.button-button {
+    text-decoration: none;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 8px;
+    margin-bottom: 13px;
+    border-radius: 12px;
+    border: 0;
+    background: var(--text-color-light);
+    color: #FFF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    font-family: houschka-rounded, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+.button-button:nth-child(3) {
+    margin-right: 8px;
+}
+
+.button-button:nth-last-child(1) {
+    margin-right: 8px;
+}
+
+.button-button a {
+    text-decoration: none;
+    color: #FFF;
 }
 
 
