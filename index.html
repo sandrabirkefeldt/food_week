@@ -22,6 +22,7 @@
 
         <div class="icon-top">
             <button onclick="togglePopup()"><img src="img/information-icon.png" class="information-icon"></button>
+            <a href="#"><img src="img/star-filled.png" class="favourite-icon"></a>
         </div>
 
 
@@ -54,6 +55,7 @@
          <p>Den Gamle By</p>
          </div>
         </div>
+       
         <div>
             <h2>Kontakt os</h2>
             <div>
@@ -82,15 +84,6 @@
                 <img src="img/search.png" class="search-icon">
                 <input id="soeg" type="search" placeholder="Søg efter event..." onkeyup="search(this.value)">
             </div>
-
-            <div class="button-container">
-                <button class="button-button" style="background-color: #83a0b4"> <a href="#kategorier">Kystpromenaden</a></button>
-                <button class="button-button" style="background-color: #719646">Food Walks</button>
-                <button class="button-button" style="background-color: #aa393b">ARoS</button> <br>
-                <button class="button-button" style="background-color: #c9a123">Salling ROOFTOP</button>
-                <button class="button-button" style="background-color: #988c7c">Den Gamle By</button>
-            </div>
-
             </section>
 
 <!-- 
@@ -98,6 +91,22 @@
                 <button class="button-change"><a href="#kortvisning">Kortvisning</a></button>
                 <button class="button-change"><a href="#listevisning">Listevisning</a></button>
             </div> -->
+<div class="dropdown">
+            <button onclick="myFunction(), rotateFunction()" class="dropbtn">Dato <span><img class="arrowDropdown"
+                        id="arrowDropdown" src="img/dropdown-pil.svg" alt="pil"></span></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Mandag d. 9/8</a>
+                <a href="#">Tirsdag d. 10/8</a>
+                <a href="#">Onsdag d. 11/8</a>
+                <a href="#">Torsdag d. 12/8</a>
+                <a href="#">Fredag d. 13/8</a>
+                <a href="#">Lørdag d. 14/8</a>
+                <a href="#">Søndag d. 15/8</a>
+            </div>
+        </div>
+
+       <button class="filtrer-button">Filtrer</button>
+
 
 
     </header>
