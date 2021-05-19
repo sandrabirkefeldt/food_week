@@ -1,6 +1,6 @@
 "use strict";
 
-
+//Logo der toner frem i starten
 document.addEventListener('DOMContentLoaded', (e) => {
     setTimeout(() => {
         document.querySelector('.splash').classList.add('display-none');
@@ -8,24 +8,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 });
 
-
-// Modalboks
-
+//Information-ikon: Pop-up vindue
 function togglePopup() {
     document.getElementById("popup-1").classList.toggle("active");
 }
 
-//Dropdowns
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+//"Dag"-dropdown
+  
+//Når brugeren klikker på knappen skifter den mellem at vise og skjule indholdet
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Close the dropdown menu if the user clicks outside of it
+//Lukker dropdown, hvis brugeren klikker udenfor knappen
 window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
+    if (!event.target.matches('.dropdown-knap')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
@@ -37,6 +34,7 @@ window.onclick = function (event) {
     }
 }
 
+//Roterer dropdown-pilen, når brugeren klikker
 function rotateFunction() {
     document.getElementById("arrowDropdown").classList.toggle("rotateArrow");
 }

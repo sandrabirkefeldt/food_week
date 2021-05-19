@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <meta name="description" content="">
+    <title>Food Week 2021</title>
+    <meta name="description" content="Kom til årets madevent fra den 9.-15. august 2021 - en uge fyldt med unikke madoplevelser i centrum af Aarhus.">
+
+     <!-- Link til CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+     <!-- Link til Leaflet Map (både CSS og JS) - et mobilvenligt, interaktivt kort -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -18,16 +21,23 @@
 </head>
 
 <body>
+
+         <!-- Header indeholdende ikoner (information + favoritter) i toppen, logo, søgefelt, "Dag"-dropdown og link til filter-funktion -->
+
        <header>
 
+        <!-- Ikoner (information + favoritter) i toppen  -->
+
         <div class="icon-top">
-            <button onclick="togglePopup()"><img src="img/information-icon.png" class="information-icon"></button>
             <a href="#"><img src="img/star-filled.png" class="favourite-icon"></a>
+            <button onclick="togglePopup()"><img src="img/information-icon.png" class="information-icon"></button>
         </div>
 
+ <!-- Information-ikon: Pop-up vindue -->
 
     <div class="popup" id="popup-1">
         <div class="overlay"></div>
+        
         <div class="content">
         <div class="close-button" onclick="togglePopup()">&times;</div>
 
@@ -38,46 +48,50 @@
         <img src="img/blaa-pin.png" alt="pin">
         <p>Kystpromenaden</p>
         </div>
+        <div class="pin-section">
+        <img src="img/brun-pin.png" alt="pin">
+         <p>Den Gamle By</p>
+         </div>
          <div class="pin-section">
         <img src="img/gron-pin.png" alt="pin">
          <p>Food Walks</p>
+         </div>
+         <div class="pin-section">
+        <img src="img/gul-pin.png" alt="pin">
+         <p>Salling ROOFTOP</p>
          </div>
           <div class="pin-section">
         <img src="img/rod-pin.png" alt="pin">
          <p>ARoS</p>
          </div>
-          <div class="pin-section">
-        <img src="img/gul-pin.png" alt="pin">
-         <p>Salling ROOFTOP</p>
-         </div>
-          <div class="pin-section">
-        <img src="img/brun-pin.png" alt="pin">
-         <p>Den Gamle By</p>
+         <div class="pin-section">
+        <img src="img/sort-pin.png" alt="pin">
+         <p>Fællesspisninger</p>
          </div>
         </div>
        
-        <div>
+        <div class="kontakt">
             <h2>Kontakt os</h2>
-            <div>
-            <h3>Telefon</h3>
-            <p>+45 53 53 00 55</p>
-            </div>
-            <div>
-            <h3>Mail</h3>
-            <p>info@thefoodproject.dk</p>
-            </div>
-            <div>
-            <h3>Adresse</h3>
-            <p>Studsgade 10A, 8000 Aarhus C</p>
-            </div>
+
+            <p>Food Week arrangeres af FOOD. Læs mere <a href="https://www.thefoodproject.dk/">her</a>. Du er altid velkommen til at kontakte os, hvis du har spørgsmål.</p>
+
+            <p> <strong>Telefon:</strong> <u>+45 53 53 00 55</u></p>
+            <p><strong>Mail:</strong> <u>info@thefoodproject.dk</u></p>
+            <p><strong>Adresse:</strong> Studsgade 10A, 8000 Aarhus C</p>
+            <a href="https://www.foodfestival.dk/">www.foodfestival.dk</a>
+           
         </div>
+
  </div>
         
     </div>
 
-    <img id="logo" src="img/logo-uden-dato.png" alt="logo-uden-dato">
+     <!-- Logo -->
+
+   <a href="index.html"><img id="logo" src="img/logo-uden-dato.png" alt="logo-uden-dato"></a>
 
     
+ <!-- Søgefelt -->
 
     <section id="sogefelt">
             <div class="input-icons">
@@ -86,14 +100,11 @@
             </div>
             </section>
 
-<!-- 
-            <div class="button-change-container">
-                <button class="button-change"><a href="#kortvisning">Kortvisning</a></button>
-                <button class="button-change"><a href="#listevisning">Listevisning</a></button>
-            </div> -->
-<div class="dropdown">
-            <button onclick="myFunction(), rotateFunction()" class="dropbtn">Dato <span><img class="arrowDropdown"
-                        id="arrowDropdown" src="img/dropdown-pil.svg" alt="pil"></span></button>
+
+            <!-- "Dag"-dropdown -->
+
+<div class="dag-dropdown">
+            <button onclick="myFunction(), rotateFunction()" class="dropdown-knap">Dag<img class="arrowDropdown" id="arrowDropdown" src="img/arrow-down.png" alt="pil"></button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#">Mandag d. 9/8</a>
                 <a href="#">Tirsdag d. 10/8</a>
@@ -105,19 +116,35 @@
             </div>
         </div>
 
-       <button class="filtrer-button">Filtrer</button>
+
+         <!-- Link til filter-funktion -->
+         
+         <a href="#" class="filter-knap"><button>Filtrer</button></a>
 
 
+<!-- 
+            <div class="button-change-container">
+                <button class="button-change"><a href="#kortvisning">Kortvisning</a></button>
+                <button class="button-change"><a href="#listevisning">Listevisning</a></button>
+            </div> 
+
+        -->
 
     </header>
+
+
+     <!-- Logo der toner frem i starten -->
 
      <div class="splash">
         <img class=fade-in src="img/logo-med-dato.png">
     </div>
 
- 
+
+     <!-- Main indeholdende map -->
 
     <main>
+
+   <!-- Leaflet Map -->
 
 <div id="mapid"></div>
 
@@ -126,9 +153,9 @@
     </main>
 
 
-    <script src="leaflet.js"></script>
+         <!-- Links til JS -->
     <script src="js.js"></script>
-    <script src="js/spa.js"></script>
+    <script src="leaflet.js"></script>
 </body>
 
 </html> 

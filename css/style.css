@@ -1,3 +1,5 @@
+/* Generel styling */
+
 html,
 body {
     margin: 0;
@@ -6,34 +8,25 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+p,
+a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #333333;
-    font-size: 19px;
+}
+
+h1,
+h2 {
+    font-size: 16px;
 }
 
 h3 {
-    font-family: 'Lucida Sans',
-        'Lucida Sans Regular',
-        'Lucida Grande',
-        'Lucida Sans Unicode',
-        Geneva,
-        Verdana,
-        sans-serif;
-    color: #333333;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 p {
-    font-family: 'Lucida Sans',
-        'Lucida Sans Regular',
-        'Lucida Grande',
-        'Lucida Sans Unicode',
-        Geneva,
-        Verdana,
-        sans-serif;
-    color: #333333;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 header {
@@ -41,13 +34,46 @@ header {
     margin: 10px 0 0 0;
 }
 
+button {
+    font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+
+/* Styling af Leaflet Map */
 
 #mapid {
     height: 500px;
     z-index: 0;
 }
 
-/* Logo der toner frem i starten*/
+/* Styling af knapper i pop-up i Leaflet Map */
+
+.leaflet-popup-content button {
+    background-color: #84A0B5;
+    border-radius: 5px;
+    width: 160px;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.leaflet-popup-content div {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Styling af logo der toner frem i starten */
+
 .splash img {
     width: 80%;
 }
@@ -93,7 +119,7 @@ header {
 }
 
 
-/* Ikoner i toppen */
+/* Styling af ikoner i toppen */
 
 .icon-top {
     display: flex;
@@ -111,6 +137,8 @@ header {
     width: 30px;
     padding: 3px;
 }
+
+/* Styling af informations pop-up */
 
 .popup .overlay {
     position: fixed;
@@ -130,7 +158,7 @@ header {
     transform: translate(-50%, -50%) scale(0);
     background: white;
     width: 80%;
-    height: 90%;
+    height: 86%;
     z-index: 2;
     padding: 20px;
     box-sizing: border-box;
@@ -158,15 +186,15 @@ header {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup h2,
-p {
-    font-size: 15px;
+.close-button {
+    width: 50px;
 }
 
 .popup img {
     width: 10%;
+    height: 10%;
+    margin-right: 10px;
 }
-
 
 .pin-container {
     display: flex;
@@ -178,11 +206,16 @@ p {
     flex-direction: row;
 }
 
-.pinsection img {
-    width: 30%;
+.kontakt a {
+    color: #333333;
+    font-size: 13px;
 }
 
-/* Logo */
+.kontakt {
+    margin-top: 30px;
+}
+
+/* Styling af logo */
 
 #logo {
     width: 30%;
@@ -191,11 +224,11 @@ p {
 }
 
 
+/* Styling af søgefelt */
 
-/* søgefelt og genveje */
 #soeg {
     -webkit-appearance: none;
-    margin: 1em auto;
+    margin: 10px auto;
     margin-bottom: 10px;
     width: 100%;
     max-width: 350px;
@@ -204,7 +237,7 @@ p {
     display: block;
     background: #fff;
     border: 0;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Lucida Sans',
         'Lucida Sans Regular',
@@ -217,62 +250,49 @@ p {
 
 .search-icon {
     position: absolute;
-    width: 15px;
+    width: 20px;
     padding-top: 14px;
     right: 30px;
     opacity: 0.8;
 }
 
-/* Dropdown Button */
-.dropbtn {
+
+/* Styling af "Dag"-dropdown */
+
+.dropdown-knap {
     background-color: white;
     border-radius: 5px;
-    width: 160px;
+    width: 165px;
     color: black;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 15px;
     border: none;
     cursor: pointer;
     box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.1);
-    font-family: 'Lucida Sans',
-        'Lucida Sans Regular',
-        'Lucida Grande',
-        'Lucida Sans Unicode',
-        Geneva,
-        Verdana,
-        sans-serif;
 }
 
 .arrowDropdown {
-    margin-left: 30%;
+    margin-left: 50%;
+    width: 18px;
 }
 
 .rotateArrow {
     transform: rotate(180deg);
 }
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover,
-.dropbtn:focus {
-    background-color: #84A0B5;
-    color: white;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
+.dag-dropdown {
     position: relative;
     display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding: 5px;
+    margin: 0 10px 10px 13px;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown content - skjult by default */
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 150px;
+    min-width: 165px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-family: 'Lucida Sans',
@@ -284,7 +304,8 @@ p {
         sans-serif;
 }
 
-/* Links inside the dropdown */
+/* Styling af links i dropdown */
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -292,31 +313,24 @@ p {
     display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: white;
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display: block;
 }
 
-.filtrer-button {
+/* Styling af filter-knap */
+
+.filter-knap {
+    margin-left: 6px;
+}
+
+.filter-knap button {
     background-color: #84A0B5;
     border-radius: 5px;
-    width: 160px;
+    width: 165px;
     color: white;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 15px;
     border: none;
     cursor: pointer;
     box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.1);
-    font-family: 'Lucida Sans',
-        'Lucida Sans Regular',
-        'Lucida Grande',
-        'Lucida Sans Unicode',
-        Geneva,
-        Verdana,
-        sans-serif;
 }
