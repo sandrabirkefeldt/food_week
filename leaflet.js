@@ -17,7 +17,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 //Definition af icon class med funktioner, der skal gælde for alle pin-ikoner:
 var IconPin = L.Icon.extend({
     options: {
-        iconSize: [20, 28.28],
+        iconSize: [20, 28.28], 
     }
 });
 
